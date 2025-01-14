@@ -24,6 +24,9 @@
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
     <script src="js/portfolio-tabs.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -115,58 +118,22 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <img src="assets/images/patterns/hero-pattern.svg" alt="" class="hero-pattern" />
-        </div>
+        <div id="particles-js" class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title reveal">
-                    <span class="gradient-text">Transforming</span> Digital
-                    <span class="hero-title-break">Experiences</span>
+                <h1 class="dynamic-text" data-aos="fade-up" data-aos-duration="1000">
+                    We Create
+                    <span class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
                 </h1>
-                <p class="hero-subtitle reveal">We craft exceptional digital solutions that elevate brands and drive success. Experience the perfect blend of innovation and expertise.</p>
-                <div class="hero-cta reveal">
-                    <a href="#contact" class="btn btn-primary magnetic">Start Your Project</a>
-                    <a href="#portfolio" class="btn btn-secondary magnetic">View Our Work</a>
-                </div>
-                <div class="hero-stats stagger-children">
-                    <div class="stat-item">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Projects Delivered</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Client Satisfaction</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    Transforming ideas into digital excellence through innovative solutions and strategic expertise.
+                </p>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <a href="/contact.html" class="primary-button">Start Your Project</a>
+                    <a href="#services" class="secondary-button">Explore Services</a>
                 </div>
             </div>
-            <div class="hero-visual reveal">
-                <div class="hero-image-container parallax" data-speed="0.1">
-                    <img src="assets/images/hero-visual.png" alt="CRT Digital Innovation" class="hero-image" />
-                    <div class="floating-elements">
-                        <div class="float-item" data-speed="0.05">
-                            <img src="assets/images/icons/services/web-design.svg" alt="" class="floating" />
-                        </div>
-                        <div class="float-item" data-speed="0.08">
-                            <img src="assets/images/icons/services/development.svg" alt="" class="floating" />
-                        </div>
-                        <div class="float-item" data-speed="0.06">
-                            <img src="assets/images/icons/services/software.svg" alt="" class="floating" />
-                        </div>
-                        <div class="float-item" data-speed="0.07">
-                            <img src="assets/images/icons/services/advertising.svg" alt="" class="floating" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span class="scroll-text">Scroll to explore</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
@@ -379,53 +346,56 @@
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="container">
-            <h2>Trusted by Industry Leaders</h2>
-            <div class="client-logos">
-                <!-- Client logos will be added here -->
-            </div>
-            <div class="trust-quote">
-                <p>"Trusted by over 20,000 businesses globally"</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/images/logo/crtOne[3206].png" alt="CRT Digital">
-                    <p>Innovation Meets Impact</p>
-                </div>
-                <div class="footer-links">
-                    <div class="link-column">
-                        <h4>Services</h4>
-                        <a href="/services/web-design">Web Design</a>
-                        <a href="/services/web-development">Web Development</a>
-                        <a href="/services/software-solutions">Software Solutions</a>
-                        <a href="/services/advertising">Digital Advertising</a>
-                    </div>
-                    <div class="link-column">
-                        <h4>Company</h4>
-                        <a href="/about">About Us</a>
-                        <a href="/portfolio">Portfolio</a>
-                        <a href="/contact">Contact</a>
+                <div class="footer-section">
+                    <h3><a href="/">CRT Digital</a></h3>
+                    <p>Transforming businesses through innovative digital solutions. We create exceptional experiences that drive growth and success.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <!-- Social media icons -->
-                    </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="/services/web-design.html">Web Design</a></p>
+                    <p><a href="/services/web-development.html">Web Development</a></p>
+                    <p><a href="/services/software-solutions.html">Software Solutions</a></p>
+                    <p><a href="/services/digital-advertising.html">Digital Advertising</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:info@crtdigital.com">Email: info@crtdigital.com</a></p>
+                    <p><a href="tel:+15551234567">Phone: (555) 123-4567</a></p>
+                    <p><a href="https://maps.google.com/?q=Austin,TX" target="_blank" rel="noopener noreferrer">Location: Austin, TX</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 CRT Digital. All rights reserved.</p>
+                <p>&copy; 2024 CRT Digital. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.json loaded');
+        });
+    </script>
+    <script>
+        var typed = new Typed('.typed-text', {
+            strings: ['Digital Experiences', 'Innovative Solutions', 'Strategic Expertise'],
+            typeSpeed: 40,
+            backSpeed: 0,
+            backDelay: 1500,
+            startDelay: 1000,
+            loop: true
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
