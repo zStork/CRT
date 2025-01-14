@@ -3,34 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - CRT Digital</title>
-    <meta name="description" content="Explore CRT Digital's portfolio of successful web design and development projects.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Portfolio - Coming Soon | CRT Digital</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
             <a href="/" class="logo">
-                <img src="assets/images/crt-logo.svg" alt="CRT Digital Logo">
+                <img src="assets/images/logo/crtOne[3206].png" alt="CRT Digital Logo">
             </a>
             <div class="nav-links">
                 <a href="/">Home</a>
+                
+                <!-- Services Mega Menu Trigger -->
+                <div class="mega-menu-trigger">
+                    <a href="#" class="has-mega-menu">Services</a>
+                    <!-- Services Mega Menu -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-grid">
+                                <!-- Web Design -->
+                                <a href="/services/web-design.html" class="mega-menu-item">
+                                    <div class="service-icon">
+                                        <img src="assets/images/icons/services/web-design.svg" alt="Web Design">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Web Design</h3>
+                                        <p>Beautiful, responsive websites that convert</p>
+                                    </div>
+                                </a>
+                                
+                                <!-- Development -->
+                                <a href="/services/development.html" class="mega-menu-item">
+                                    <div class="service-icon">
+                                        <img src="assets/images/icons/services/development.svg" alt="Development">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Development</h3>
+                                        <p>Custom software solutions for your business</p>
+                                    </div>
+                                </a>
+                                
+                                <!-- Digital Marketing -->
+                                <a href="/services/marketing.html" class="mega-menu-item">
+                                    <div class="service-icon">
+                                        <img src="assets/images/icons/services/marketing.svg" alt="Digital Marketing">
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>Digital Marketing</h3>
+                                        <p>Reach and engage your target audience</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <a href="/portfolio.html" class="active">Portfolio</a>
                 <a href="/about.html">About</a>
                 <a href="/contact.html">Contact</a>
@@ -44,141 +83,68 @@
         </div>
     </nav>
 
-    <!-- Portfolio Header -->
-    <header class="portfolio-header">
+    <!-- Under Construction Hero -->
+    <section class="construction-hero">
+        <div class="constellation-bg"></div>
         <div class="container">
-            <h1 class="reveal">Our Work Speaks for Itself</h1>
-            <p class="reveal">Discover how CRT Digital has transformed businesses with cutting-edge web solutions.</p>
-        </div>
-    </header>
-
-    <!-- Portfolio Grid -->
-    <section class="portfolio-grid">
-        <div class="container">
-            <div class="portfolio-filters reveal">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web-design">Web Design</button>
-                <button class="filter-btn" data-filter="development">Development</button>
-                <button class="filter-btn" data-filter="advertising">Advertising</button>
-            </div>
-
-            <div class="portfolio-items stagger-children">
-                <!-- Premium Party Distribution -->
-                <div class="portfolio-item" data-category="web-design development">
-                    <div class="portfolio-image">
-                        <img src="assets/images/portfolio/ppd.jpg" alt="Premium Party Distribution Website">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h3>Premium Party Distribution</h3>
-                                <p>E-commerce platform with custom inventory management system</p>
-                                <a href="https://premiumpartydistribution.com" target="_blank" class="portfolio-link">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-details">
-                        <h4>Project Overview</h4>
-                        <p>A complete e-commerce solution featuring:</p>
-                        <ul>
-                            <li>Custom inventory management system</li>
-                            <li>Real-time stock updates</li>
-                            <li>Integrated payment processing</li>
-                            <li>Mobile-responsive design</li>
-                        </ul>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="number">300%</span>
-                                <span class="label">Sales Increase</span>
-                            </div>
-                            <div class="metric">
-                                <span class="number">50%</span>
-                                <span class="label">Cost Reduction</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="construction-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Our Portfolio is Being Crafted</h1>
+                <div class="construction-icon" data-aos="fade-up" data-aos-delay="200">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
-
-                <!-- Brands N People -->
-                <div class="portfolio-item" data-category="development advertising">
-                    <div class="portfolio-image">
-                        <img src="assets/images/portfolio/bnp.jpg" alt="Brands N People Platform">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h3>Brands N People</h3>
-                                <p>Brand management platform with social integration</p>
-                                <a href="https://brandsnpeople.com" target="_blank" class="portfolio-link">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-details">
-                        <h4>Project Overview</h4>
-                        <p>A comprehensive brand management solution featuring:</p>
-                        <ul>
-                            <li>Social media integration</li>
-                            <li>Analytics dashboard</li>
-                            <li>Campaign management tools</li>
-                            <li>Automated reporting</li>
-                        </ul>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="number">200%</span>
-                                <span class="label">Engagement Increase</span>
-                            </div>
-                            <div class="metric">
-                                <span class="number">40%</span>
-                                <span class="label">Time Saved</span>
-                            </div>
-                        </div>
-                    </div>
+                <p data-aos="fade-up" data-aos-delay="400">We're putting the finishing touches on our showcase of innovative digital solutions. Check back soon to explore our transformative work.</p>
+                <div class="construction-cta" data-aos="fade-up" data-aos-delay="600">
+                    <a href="contact.html" class="cta-button">Get in Touch</a>
+                    <a href="services.html" class="text-button">View Our Services</a>
                 </div>
-
-                <!-- Additional portfolio items... -->
             </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="reveal">Ready to Transform Your Digital Presence?</h2>
-            <p class="reveal">Let's create something extraordinary together.</p>
-            <button class="primary-cta reveal">Start Your Project</button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/images/crt-logo-white.svg" alt="CRT Digital">
-                    <p>Innovation Meets Impact</p>
-                </div>
-                <div class="footer-links">
-                    <div class="link-column">
-                        <h4>Services</h4>
-                        <a href="/services/web-design">Web Design</a>
-                        <a href="/services/web-development">Web Development</a>
-                        <a href="/services/software-solutions">Software Solutions</a>
-                        <a href="/services/advertising">Digital Advertising</a>
-                    </div>
-                    <div class="link-column">
-                        <h4>Company</h4>
-                        <a href="/about">About Us</a>
-                        <a href="/portfolio">Portfolio</a>
-                        <a href="/contact">Contact</a>
+                <div class="footer-section">
+                    <h3><a href="/">CRT Digital</a></h3>
+                    <p>Transforming businesses through innovative digital solutions. We create exceptional experiences that drive growth and success.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <!-- Social media icons -->
-                    </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="/services/web-design.html">Web Design</a></p>
+                    <p><a href="/services/web-development.html">Web Development</a></p>
+                    <p><a href="/services/software-solutions.html">Software Solutions</a></p>
+                    <p><a href="/services/digital-advertising.html">Digital Advertising</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:info@crtdigital.com">Email: info@crtdigital.com</a></p>
+                    <p><a href="tel:+15551234567">Phone: (555) 123-4567</a></p>
+                    <p><a href="https://maps.google.com/?q=Austin,TX" target="_blank" rel="noopener noreferrer">Location: Austin, TX</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 CRT Digital. All rights reserved.</p>
+                <p>&copy; 2024 CRT Digital. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

@@ -37,19 +37,44 @@ async function handleFormSubmit(e) {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         
-        // Send to backend (replace with your actual API endpoint)
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
-        
-        if (!response.ok) throw new Error('Failed to send message');
+        // Send notification emails
+        await Promise.all([
+            // Send admin notification
+            fetch('/api/send-notification', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: 'admin@getcrtdigital.com',
+                    subject: 'New Contact Form Submission',
+                    template: 'admin-notification',
+                    data: {
+                        name: data.name,
+                        email: data.email,
+                        phone: data.phone || 'Not provided',
+                        message: data.message,
+                        submittedAt: new Date().toISOString()
+                    }
+                })
+            }),
+            // Send user confirmation
+            fetch('/api/send-confirmation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: data.email,
+                    name: data.name,
+                    subject: 'Thank you for contacting CRT Digital',
+                    template: 'contact-confirmation'
+                })
+            })
+        ]);
         
         // Show success message
-        showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
         form.reset();
         
     } catch (error) {
@@ -102,7 +127,7 @@ function validateField() {
     
     // Phone validation (optional field)
     if (field.type === 'tel' && field.value.trim()) {
-        const phoneRegex = /^\+?[\d\s-()]{10,}$/;
+        const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
         if (!phoneRegex.test(field.value)) {
             isValid = false;
             errorMessage = 'Please enter a valid phone number';
@@ -114,10 +139,10 @@ function validateField() {
     
     // Show error message if invalid
     if (!isValid) {
-        const errorElement = document.createElement('div');
-        errorElement.className = 'error-message';
-        errorElement.textContent = errorMessage;
-        field.parentElement.appendChild(errorElement);
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = errorMessage;
+        field.parentElement.appendChild(errorDiv);
     }
     
     return isValid;
@@ -131,54 +156,11 @@ function showNotification(message, type) {
     document.body.appendChild(notification);
     
     // Trigger animation
-    setTimeout(() => notification.classList.add('show'), 10);
+    setTimeout(() => notification.classList.add('show'), 100);
     
-    // Remove notification after 5 seconds
+    // Remove notification after delay
     setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => notification.remove(), 300);
     }, 5000);
-}
-
-// Google Maps Integration
-function initMap() {
-    const office = { lat: 37.7749, lng: -122.4194 }; // San Francisco coordinates
-    
-    const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: office,
-        styles: [
-            {
-                "featureType": "all",
-                "elementType": "geometry",
-                "stylers": [{"color": "#f5f5f5"}]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{"color": "#c9c9c9"}]
-            },
-            // Add more custom styles as needed
-        ]
-    });
-    
-    const marker = new google.maps.Marker({
-        position: office,
-        map: map,
-        title: 'CRT Digital'
-    });
-    
-    // Optional: Add info window
-    const infoWindow = new google.maps.InfoWindow({
-        content: `
-            <div class="map-info-window">
-                <h3>CRT Digital</h3>
-                <p>123 Digital Avenue<br>Suite 200<br>San Francisco, CA 94105</p>
-            </div>
-        `
-    });
-    
-    marker.addListener('click', () => {
-        infoWindow.open(map, marker);
-    });
 }

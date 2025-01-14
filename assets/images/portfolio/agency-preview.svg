@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FF8E53;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1a1a1a"/>
+    
+    <!-- Hero Section -->
+    <rect width="800" height="300" fill="url(#heroGrad)"/>
+    
+    <!-- Navigation -->
+    <g transform="translate(40, 40)">
+        <circle cx="0" cy="0" r="20" fill="white"/>
+        <g transform="translate(500, -10)">
+            <rect width="60" height="20" rx="10" fill="white" fill-opacity="0.9"/>
+            <rect x="80" width="60" height="20" rx="10" fill="white" fill-opacity="0.9"/>
+            <rect x="160" width="60" height="20" rx="10" fill="white" fill-opacity="0.9"/>
+        </g>
+    </g>
+    
+    <!-- Hero Content -->
+    <g transform="translate(40, 120)">
+        <text font-family="Arial" font-size="48" fill="white" font-weight="bold">Creative</text>
+        <text y="60" font-family="Arial" font-size="48" fill="white" font-weight="bold">Agency</text>
+        <rect y="100" width="120" height="40" rx="20" fill="white"/>
+    </g>
+    
+    <!-- Portfolio Grid -->
+    <g transform="translate(40, 320)">
+        <rect width="220" height="110" rx="8" fill="#ffffff"/>
+        <rect x="250" width="220" height="110" rx="8" fill="#ffffff"/>
+        <rect x="500" width="220" height="110" rx="8" fill="#ffffff"/>
+    </g>
+</svg>

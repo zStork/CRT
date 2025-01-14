@@ -17,6 +17,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/animations.css">
     
     <!-- Scripts -->
@@ -28,7 +29,7 @@
     <nav class="main-nav">
         <div class="nav-container">
             <a href="/" class="logo">
-                <img src="assets/images/crt-logo.svg" alt="CRT Digital Logo">
+                <img src="assets/images/logo/crtOne[3206].png" alt="CRT Digital Logo">
             </a>
             <div class="nav-links">
                 <a href="/">Home</a>
@@ -48,8 +49,8 @@
     <!-- Contact Hero -->
     <header class="contact-hero">
         <div class="container">
-            <h1 class="reveal">Let's Build Something Extraordinary Together</h1>
-            <p class="reveal">Ready to elevate your digital presence? We're here to help.</p>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Let's Build Something Extraordinary Together</h1>
+            <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Ready to elevate your digital presence? We're here to help.</p>
         </div>
     </header>
 
@@ -58,7 +59,7 @@
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="contact-form-container reveal">
+                <div class="contact-form-container" data-aos="fade-right">
                     <h2>Get in Touch</h2>
                     <form id="contactForm" class="contact-form" novalidate>
                         <div class="form-group">
@@ -94,28 +95,28 @@
                 </div>
 
                 <!-- Contact Information -->
-                <div class="contact-info reveal">
+                <div class="contact-info" data-aos="fade-left">
                     <div class="info-card">
                         <h3>Contact Information</h3>
                         <div class="info-item">
-                            <i class="icon-phone"></i>
+                            <svg width="24" height="24"><use href="assets/images/icons/contact-icons.svg#phone-icon"/></svg>
                             <div>
                                 <h4>Phone</h4>
-                                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p><a href="tel:+17122491176">(712) 249-1176</a></p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <i class="icon-email"></i>
+                            <svg width="24" height="24"><use href="assets/images/icons/contact-icons.svg#email-icon"/></svg>
                             <div>
                                 <h4>Email</h4>
-                                <p><a href="mailto:hello@crtdigital.com">hello@crtdigital.com</a></p>
+                                <p><a href="mailto:admin@getcrtdigital.com">admin@getcrtdigital.com</a></p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <i class="icon-location"></i>
+                            <svg width="24" height="24"><use href="assets/images/icons/contact-icons.svg#location-icon"/></svg>
                             <div>
                                 <h4>Office</h4>
-                                <p>123 Digital Avenue<br>Suite 200<br>San Francisco, CA 94105</p>
+                                <p>2400 Bennett Avenue<br>Dallas, TX 75206</p>
                             </div>
                         </div>
                     </div>
@@ -124,13 +125,13 @@
                         <h3>Connect With Us</h3>
                         <div class="social-icons">
                             <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
-                                <i class="icon-linkedin"></i>
+                                <svg width="24" height="24"><use href="assets/images/icons/social-icons.svg#linkedin-icon"/></svg>
                             </a>
                             <a href="#" target="_blank" rel="noopener" aria-label="Twitter">
-                                <i class="icon-twitter"></i>
+                                <svg width="24" height="24"><use href="assets/images/icons/social-icons.svg#twitter-icon"/></svg>
                             </a>
                             <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-                                <i class="icon-instagram"></i>
+                                <svg width="24" height="24"><use href="assets/images/icons/social-icons.svg#instagram-icon"/></svg>
                             </a>
                         </div>
                     </div>
@@ -139,41 +140,37 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="map-container" id="map">
-            <!-- Google Maps will be embedded here -->
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/images/crt-logo-white.svg" alt="CRT Digital">
-                    <p>Innovation Meets Impact</p>
-                </div>
-                <div class="footer-links">
-                    <div class="link-column">
-                        <h4>Services</h4>
-                        <a href="/services/web-design">Web Design</a>
-                        <a href="/services/web-development">Web Development</a>
-                        <a href="/services/software-solutions">Software Solutions</a>
-                        <a href="/services/advertising">Digital Advertising</a>
-                    </div>
-                    <div class="link-column">
-                        <h4>Company</h4>
-                        <a href="/about">About Us</a>
-                        <a href="/portfolio">Portfolio</a>
-                        <a href="/contact">Contact</a>
+                <div class="footer-section">
+                    <h3><a href="/">CRT Digital</a></h3>
+                    <p>Transforming businesses through innovative digital solutions. We create exceptional experiences that drive growth and success.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="20" height="20"><use href="assets/images/icons/social-icons.svg#linkedin-icon"/></svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg width="20" height="20"><use href="assets/images/icons/social-icons.svg#twitter-icon"/></svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="20" height="20"><use href="assets/images/icons/social-icons.svg#instagram-icon"/></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <!-- Social media icons -->
-                    </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="services/web-design.html">Web Design</a></p>
+                    <p><a href="services/web-development.html">Web Development</a></p>
+                    <p><a href="services/software-solutions.html">Software Solutions</a></p>
+                    <p><a href="services/digital-advertising.html">Digital Advertising</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:admin@getcrtdigital.com">Email: admin@getcrtdigital.com</a></p>
+                    <p><a href="tel:+17122491176">Phone: (712) 249-1176</a></p>
+                    <p><a href="https://maps.google.com/?q=2400+Bennett+Avenue,+Dallas+TX+75206" target="_blank" rel="noopener noreferrer">Location: Dallas, TX</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -182,7 +179,16 @@
         </div>
     </footer>
 
-    <!-- Google Maps Script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
