@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="400" viewBox="0 0 1920 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="code" width="100" height="100" patternUnits="userSpaceOnUse">
+            <text x="10" y="40" fill="#83C5BE" opacity="0.1" font-family="monospace" font-size="14">&lt;/&gt;</text>
+            <text x="50" y="80" fill="#83C5BE" opacity="0.1" font-family="monospace" font-size="14">{}</text>
+        </pattern>
+    </defs>
+    <rect width="1920" height="400" fill="#006D77"/>
+    <rect width="1920" height="400" fill="url(#code)"/>
+    <path d="M 0 200 Q 480 100 960 200 T 1920 200" stroke="#83C5BE" fill="none" stroke-width="2" opacity="0.2"/>
+</svg>

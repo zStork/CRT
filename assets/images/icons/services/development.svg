@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Gradient Definitions -->
+    <defs>
+        <linearGradient id="devGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#004d40;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00796b;stop-opacity:1" />
+        </linearGradient>
+        <filter id="devGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+            <feBlend in="SourceGraphic" in2="glow" mode="normal" />
+        </filter>
+    </defs>
+    
+    <!-- Main Circle -->
+    <circle cx="60" cy="60" r="54" fill="url(#devGradient)" filter="url(#devGlow)" />
+    
+    <!-- Code Elements -->
+    <g transform="translate(30, 35)" fill="white">
+        <!-- Code Lines -->
+        <g opacity="0.8">
+            <rect x="0" y="0" width="30" height="2" rx="1" fill="white">
+                <animate attributeName="width" values="0;30" dur="1s" begin="0s"/>
+            </rect>
+            <rect x="35" y="0" width="15" height="2" rx="1" fill="white" opacity="0.6">
+                <animate attributeName="width" values="0;15" dur="0.5s" begin="0.8s"/>
+            </rect>
+        </g>
+        
+        <g opacity="0.8" transform="translate(0, 10)">
+            <rect x="5" y="0" width="40" height="2" rx="1" fill="white">
+                <animate attributeName="width" values="0;40" dur="1.2s" begin="0.3s"/>
+            </rect>
+        </g>
+        
+        <g opacity="0.8" transform="translate(0, 20)">
+            <rect x="0" y="0" width="20" height="2" rx="1" fill="white">
+                <animate attributeName="width" values="0;20" dur="0.7s" begin="0.6s"/>
+            </rect>
+            <rect x="25" y="0" width="25" height="2" rx="1" fill="white" opacity="0.6">
+                <animate attributeName="width" values="0;25" dur="0.9s" begin="1s"/>
+            </rect>
+        </g>
+        
+        <!-- Brackets -->
+        <path d="M0 40L10 30L0 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <animate attributeName="d" values="M5 40L5 20;M0 40L10 30L0 20" dur="0.5s" begin="0s" fill="freeze"/>
+        </path>
+        
+        <path d="M60 40L50 30L60 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <animate attributeName="d" values="M55 40L55 20;M60 40L50 30L60 20" dur="0.5s" begin="0s" fill="freeze"/>
+        </path>
+    </g>
+    
+    <!-- Floating Elements -->
+    <g>
+        <circle cx="25" cy="25" r="3" fill="white" opacity="0.3">
+            <animate attributeName="cy" values="25;22;25" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="95" cy="45" r="3" fill="white" opacity="0.3">
+            <animate attributeName="cy" values="45;42;45" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="85" cy="90" r="3" fill="white" opacity="0.3">
+            <animate attributeName="cy" values="90;87;90" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <!-- Binary Background -->
+    <g fill="white" opacity="0.1" font-family="monospace" font-size="8">
+        <text x="20" y="30">01</text>
+        <text x="90" y="40">10</text>
+        <text x="40" y="85">11</text>
+        <text x="75" y="70">00</text>
+    </g>
+</svg>

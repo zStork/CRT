@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Gradient Definitions -->
+    <defs>
+        <linearGradient id="designGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+            <feBlend in="SourceGraphic" in2="glow" mode="normal" />
+        </filter>
+    </defs>
+    
+    <!-- Main Circle -->
+    <circle cx="60" cy="60" r="54" fill="url(#designGradient)" filter="url(#glow)" />
+    
+    <!-- Design Elements -->
+    <g transform="translate(30, 30)" fill="white">
+        <!-- Browser Window Frame -->
+        <path d="M60 15H0V55C0 57.7614 2.23858 60 5 60H55C57.7614 60 60 57.7614 60 55V15Z" fill="white" fill-opacity="0.1"/>
+        <path d="M60 5C60 2.23858 57.7614 0 55 0H5C2.23858 0 0 2.23858 0 5V15H60V5Z" fill="white" fill-opacity="0.2"/>
+        
+        <!-- Browser Controls -->
+        <circle cx="7" cy="7.5" r="2.5" fill="white"/>
+        <circle cx="15" cy="7.5" r="2.5" fill="white"/>
+        <circle cx="23" cy="7.5" r="2.5" fill="white"/>
+        
+        <!-- Design Elements -->
+        <rect x="10" y="25" width="20" height="2" rx="1" fill="white"/>
+        <rect x="10" y="35" width="40" height="2" rx="1" fill="white"/>
+        <rect x="10" y="45" width="30" height="2" rx="1" fill="white"/>
+        
+        <!-- Interactive Elements -->
+        <circle cx="45" cy="30" r="8" fill="white" fill-opacity="0.2"/>
+        <path d="M45 26V34M41 30H49" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Animated Particles -->
+    <g>
+        <circle cx="20" cy="20" r="2" fill="white" opacity="0.5">
+            <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="100" cy="40" r="2" fill="white" opacity="0.5">
+            <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="85" cy="85" r="2" fill="white" opacity="0.5">
+            <animate attributeName="opacity" values="0.5;0;0.5" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+</svg>

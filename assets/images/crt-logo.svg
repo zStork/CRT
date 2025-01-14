@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .logo-text { fill: #006D77; font-family: 'Montserrat', sans-serif; font-weight: bold; }
+        .digital-text { fill: #83C5BE; font-family: 'Montserrat', sans-serif; }
+    </style>
+    <text x="10" y="28" class="logo-text" font-size="24">CRT</text>
+    <text x="65" y="28" class="digital-text" font-size="20">Digital</text>
+</svg>

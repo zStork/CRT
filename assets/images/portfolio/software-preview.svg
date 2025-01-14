@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dashboard Background -->
+    <rect x="20" y="20" width="360" height="260" rx="8" fill="#1F2937"/>
+    
+    <!-- Sidebar -->
+    <rect x="20" y="20" width="80" height="260" rx="8" fill="#374151"/>
+    <circle cx="60" cy="50" r="15" fill="#006D77"/>
+    <rect x="45" y="90" width="30" height="4" rx="2" fill="#83C5BE"/>
+    <rect x="45" y="110" width="30" height="4" rx="2" fill="#83C5BE"/>
+    <rect x="45" y="130" width="30" height="4" rx="2" fill="#83C5BE"/>
+    
+    <!-- Main Content -->
+    <rect x="120" y="40" width="240" height="100" rx="4" fill="#006D77" fill-opacity="0.2"/>
+    <rect x="120" y="160" width="115" height="100" rx="4" fill="#006D77" fill-opacity="0.2"/>
+    <rect x="245" y="160" width="115" height="100" rx="4" fill="#006D77" fill-opacity="0.2"/>
+    
+    <!-- Chart Elements -->
+    <path d="M140 120 L180 90 L220 110 L260 80 L300 100" stroke="#006D77" stroke-width="2"/>
+    <circle cx="180" cy="90" r="3" fill="#83C5BE"/>
+    <circle cx="220" cy="110" r="3" fill="#83C5BE"/>
+    <circle cx="260" cy="80" r="3" fill="#83C5BE"/>
+</svg>

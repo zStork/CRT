@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1F2937"/>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#006D77" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+    <rect width="800" height="450" fill="url(#grid)"/>
+    
+    <!-- Browser Window -->
+    <rect x="100" y="50" width="600" height="350" rx="8" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="100" y="50" width="600" height="40" rx="8" fill="#F1F5F9"/>
+    <circle cx="130" cy="70" r="6" fill="#FF5F57"/>
+    <circle cx="150" cy="70" r="6" fill="#FFBD2E"/>
+    <circle cx="170" cy="70" r="6" fill="#28C840"/>
+    
+    <!-- Navigation -->
+    <rect x="120" y="110" width="560" height="50" fill="#FFFFFF"/>
+    <rect x="140" y="125" width="100" height="20" rx="4" fill="#006D77"/>
+    <rect x="520" y="125" width="80" height="20" rx="4" fill="#83C5BE"/>
+    
+    <!-- Product Grid -->
+    <rect x="140" y="180" width="160" height="180" rx="4" fill="#F8FAFC"/>
+    <rect x="320" y="180" width="160" height="180" rx="4" fill="#F8FAFC"/>
+    <rect x="500" y="180" width="160" height="180" rx="4" fill="#F8FAFC"/>
+    
+    <!-- Product Images -->
+    <rect x="150" y="190" width="140" height="120" rx="4" fill="#83C5BE"/>
+    <rect x="330" y="190" width="140" height="120" rx="4" fill="#83C5BE"/>
+    <rect x="510" y="190" width="140" height="120" rx="4" fill="#83C5BE"/>
+    
+    <!-- Product Details -->
+    <rect x="150" y="320" width="80" height="10" rx="2" fill="#006D77"/>
+    <rect x="150" y="340" width="120" height="8" rx="2" fill="#64748B"/>
+    
+    <rect x="330" y="320" width="80" height="10" rx="2" fill="#006D77"/>
+    <rect x="330" y="340" width="120" height="8" rx="2" fill="#64748B"/>
+    
+    <rect x="510" y="320" width="80" height="10" rx="2" fill="#006D77"/>
+    <rect x="510" y="340" width="120" height="8" rx="2" fill="#64748B"/>
+    
+    <!-- Floating Elements -->
+    <circle cx="50" cy="150" r="20" fill="#006D77" opacity="0.1"/>
+    <circle cx="750" cy="300" r="30" fill="#83C5BE" opacity="0.1"/>
+    <path d="M720 100 L750 120 L720 140" fill="#006D77" opacity="0.1"/>
+    
+    <!-- Shadow Filter -->
+    <defs>
+        <filter id="shadow" x="-4" y="-4" width="620" height="370" filterUnits="userSpaceOnUse">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.1"/>
+        </filter>
+    </defs>
+</svg>

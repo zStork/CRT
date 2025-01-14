@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Gradient Definitions -->
+    <defs>
+        <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a237e;stop-opacity:0.1" />
+            <stop offset="50%" style="stop-color:#0277bd;stop-opacity:0.05" />
+            <stop offset="100%" style="stop-color:#00838f;stop-opacity:0.1" />
+        </linearGradient>
+        
+        <!-- Particle Effect -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+            <feBlend in="SourceGraphic" in2="glow" mode="normal" />
+        </filter>
+    </defs>
+    
+    <!-- Background Pattern -->
+    <rect width="1440" height="800" fill="url(#heroGradient)" />
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" />
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+    
+    <!-- Animated Circles -->
+    <g class="circles" opacity="0.5">
+        <circle cx="200" cy="200" r="100" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none">
+            <animate attributeName="r" values="100;120;100" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.5;0.3;0.5" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="1200" cy="600" r="150" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none">
+            <animate attributeName="r" values="150;180;150" dur="6s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="6s" repeatCount="indefinite" />
+        </circle>
+    </g>
+    
+    <!-- Floating Particles -->
+    <g class="particles" filter="url(#glow)">
+        <circle cx="400" cy="300" r="2" fill="white">
+            <animate attributeName="cy" values="300;280;300" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="800" cy="500" r="2" fill="white">
+            <animate attributeName="cy" values="500;520;500" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="1100" cy="200" r="2" fill="white">
+            <animate attributeName="cy" values="200;180;200" dur="5s" repeatCount="indefinite" />
+        </circle>
+    </g>
+    
+    <!-- Wave Pattern -->
+    <path class="wave" d="M0,100 C300,150 600,50 900,100 C1200,150 1500,50 1800,100" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none">
+        <animate attributeName="d" values="M0,100 C300,150 600,50 900,100 C1200,150 1500,50 1800,100;M0,100 C300,50 600,150 900,100 C1200,50 1500,150 1800,100;M0,100 C300,150 600,50 900,100 C1200,150 1500,50 1800,100" dur="10s" repeatCount="indefinite" />
+    </path>
+</svg>
